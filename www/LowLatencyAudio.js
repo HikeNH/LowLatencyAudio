@@ -26,6 +26,10 @@ var LowLatencyAudio = {
 
 	unload: function (id, success, fail) {
 		return exec(success, fail, "LowLatencyAudio", "unload", [id]);
+	},
+	
+	setRate: function (id, success, fail) {
+		return exec(success, fail, "LowLatencyAudio", "setRate", [id, rate]);
 	}
 };
 
