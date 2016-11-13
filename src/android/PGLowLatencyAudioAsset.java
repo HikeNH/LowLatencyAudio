@@ -72,5 +72,11 @@ public class PGLowLatencyAudioAsset {
 		}
 		voices.removeAll(voices);
 	}
+    
+    public void setRate(float Rate) throws IOException
+	{
+		this.setRate (Rate);
+		
+	}
 	
 }
