@@ -85,6 +85,12 @@ public class PGPolyphonicVoice implements OnPreparedListener, OnCompletionListen
 		invokePlay( true );
 	}
 	
+	public void setRate(float rate) throws IOException
+	{
+		
+		mp.setRate(rate);
+	}
+	
 	public void unload() throws IOException
 	{
 		this.stop();
