@@ -75,7 +75,8 @@ public class PGLowLatencyAudioAsset {
     
     public void setRate(float Rate) throws IOException
 	{		
-		this.setRate(Rate);
+		PGPolyphonicVoice voice = voices.get(playIndex);
+		voice.setRate((float)Rate);
 	}
 	
 }
