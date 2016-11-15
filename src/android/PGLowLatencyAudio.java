@@ -42,7 +42,7 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 	public static final String STOP="stop";
 	public static final String LOOP="loop";
 	public static final String UNLOAD="unload";
-	
+	public static final String SETRATE="setRate";
 	public static final int DEFAULT_POLYPHONY_VOICES = 15;
 	
 
@@ -185,7 +185,18 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 					return false;
 				}
 			}
-			
+			else if ( SETRATE.equals( action ) ) 
+			{
+				if ( assetMap.containsKey(audioID) )
+				{
+					PGLowLatencyAudioAsset asset = assetMap.get( audioID );
+					
+						asset.setRate(0.5);
+					
+					callbackContext.success("returned");
+					return true;
+				}
+			}
 			if ( UNLOAD.equals( action ) ) 
 			{
 				if ( assetMap.containsKey(audioID) )
