@@ -258,9 +258,7 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 		{
 			
 			if((android.os.Build.VERSION.SDK_INT) == 21){
-    sp21 = new SoundPool.Builder();
-    sp21.setMaxStreams(5);
-    soundPool = sp21.build();
+    soundpool = new SoundPool.Builder().setMaxStreams(25).build();
 }
 else{
     soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
