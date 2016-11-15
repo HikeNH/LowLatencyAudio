@@ -37,7 +37,7 @@ public class PGLowLatencyAudioAsset {
 		}
 	}
 	
-	public void play() throws IOException
+	public int play() throws IOException
 	{
 		PGPolyphonicVoice voice = voices.get(playIndex);
 		voice.play();
