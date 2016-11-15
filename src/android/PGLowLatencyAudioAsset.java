@@ -43,8 +43,7 @@ public class PGLowLatencyAudioAsset {
 		voice.play();
 		playIndex++;
 		playIndex = playIndex % voices.size();
-		_callbackContext.success(playIndex);
-	}
+			}
 	
 	public void stop() throws IOException
 	{
