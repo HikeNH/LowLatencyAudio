@@ -191,7 +191,7 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 				{
 					PGLowLatencyAudioAsset asset = assetMap.get( audioID );
 					
-						asset.setRate(0.5);
+						asset.setRate(audioID, 0.5);
 					
 					callbackContext.success("returned");
 					return true;
