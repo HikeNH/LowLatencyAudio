@@ -196,7 +196,8 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 				else if ( soundMap.containsKey(audioID) )
 				{
 					        int assetIntID = soundMap.get( audioID );
-						soundPool.setRate(assetIntID, 0.5f );
+						float assetRate =args.getInt(1);
+					        soundPool.setRate(assetIntID, (float)assetRate );
 					
 					callbackContext.success("OK");
 					return true;
