@@ -189,12 +189,22 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 			{
 				if ( assetMap.containsKey(audioID) )
 				{
-					PGLowLatencyAudioAsset asset = assetMap.get( audioID );
 					
-						asset.setRate(audioID, 0.5);
-					
-					callbackContext.success("returned");
+					callbackContext.error("Not Supported");
 					return true;
+				}
+				else if ( soundMap.containsKey(audioID) )
+				{
+					
+						soundPool.setRate(audioID, 0.5 );
+					
+					callbackContext.success("OK");
+					return true;
+				}
+				else 
+				{
+					callbackContext.error(ERROR_NO_AUDIOID);
+					return false;
 				}
 			}
 			if ( UNLOAD.equals( action ) ) 
