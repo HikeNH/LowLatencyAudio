@@ -203,7 +203,7 @@ public class PGLowLatencyAudio extends CordovaPlugin {
 				}
 				else 
 				{
-					callbackContext.error(ERROR_NO_AUDIOID);
+					callbackContext.error(audioID);
 					return false;
 				}
 			}
