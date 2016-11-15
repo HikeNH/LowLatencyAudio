@@ -30,8 +30,10 @@ var LowLatencyAudio = {
 		return exec(success, fail, "LowLatencyAudio", "unload", [id]);
 	},
 	
-	setRate: function (id, rate) {
-		exec(null, null, "LowLatencyAudio", "setRate", [id, rate]);
+	setRate: function (id, rate, success, fail) {
+		exec(function(p) {alert(p);
+        success(p);
+        }, fail, "LowLatencyAudio", "setRate", [id, rate]);
 	}
 };
 
