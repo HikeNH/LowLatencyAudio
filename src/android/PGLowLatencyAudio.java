@@ -22,7 +22,7 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.media.SoundPool.Builder
+import android.media.SoundPool.Builder;
 import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
