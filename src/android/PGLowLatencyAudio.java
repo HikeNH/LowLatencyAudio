@@ -21,6 +21,7 @@ import org.json.JSONException;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
+import android.media.AudioTrack;
 import android.media.SoundPool;
 import android.media.SoundPool.Builder;
 import android.util.Log;
