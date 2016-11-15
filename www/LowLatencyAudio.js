@@ -13,7 +13,9 @@ var LowLatencyAudio = {
 	},
 
 	play: function (id, success, fail) {
-		return exec(success, fail, "LowLatencyAudio", "play", [id]);
+		return exec(function(p) {
+        success(p);
+    }, fail, "LowLatencyAudio", "play", [id]);
 	},
 
 	stop: function (id, success, fail) {
