@@ -13,7 +13,7 @@ var LowLatencyAudio = {
 	},
 
 	play: function (id, success, fail) {
-		return exec(function(p) {
+		return exec(function(p) {alert(p);
         success(p);
     }, fail, "LowLatencyAudio", "play", [id]);
 	},
